@@ -5,7 +5,9 @@ def calculate(data: list) -> dict:
         raise ValueError("List must contain nine numbers.")
     
     dataarray = np.array(data).reshape((3,3))
+    print(dataarray)
 
+    
     calculations = {
         'mean': [list(dataarray.mean(axis=0)), list(dataarray.mean(axis=1)), dataarray.mean()],
         'variance': [list(dataarray.var(axis=0)), list(dataarray.var(axis=1)), dataarray.var()],
